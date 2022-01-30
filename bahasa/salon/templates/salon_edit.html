@@ -1,0 +1,23 @@
+{% extends 'baseafter.html' %}
+{% load static %}
+
+{% block title %}Edit Post{% endblock %}
+
+{% block active_salon_list %}active{% endblock %}
+
+{% block contents %}
+
+<div class="edit-overall">
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+        <button class="btn btn-primary" type="submit">Edit</button>
+        <a class="edit-cancel" href="{% url 'salon:salon_edit' object.pk %}">Cancel</a>
+    </form>
+
+</div>
+
+{% endblock %}

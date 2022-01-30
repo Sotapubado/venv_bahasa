@@ -1,0 +1,18 @@
+{% extends 'baseafter.html' %}
+{% load static %}
+
+{% block title %}Create Post{% endblock %}
+
+{% block active_salon_list %}active{% endblock %}
+
+{% block contents %}
+    <div class="saloncreate-overall">
+        <form method="POST" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <table class="table">
+              {{ form.as_table }}
+            </table>
+            <button class="btn btn-primary" type="submit">Create </button>
+        </form>
+    </div>
+{% endblock %}
