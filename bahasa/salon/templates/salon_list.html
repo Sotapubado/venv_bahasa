@@ -1,0 +1,52 @@
+{% extends 'baseafter.html' %}
+{% load static %}
+{% block title %}list.index{% endblock %}
+
+{% block contents %}
+
+    <div class="salon-list-overall">
+        <a class="salon-new-link" href="#">New Post</a>
+
+        {% for salon in salon_list %}
+         <div class="post-preview">
+            <a class="detail-link" href="{% url 'salon:salon_detail' salon.pk %}"> 
+                <h2 class="post-title">
+                    {{ salon.title }}
+                </h2>
+                <h3 class="post-subtitle">
+                    {{ salon.content|truncatechars:20 }}
+                </h3>
+            </a>
+            <p class="post-meta">{{ salon.created_at }}</p>
+        </div>
+        <hr>
+        {% empty %}
+            <p>No Post</p>
+        {% endfor %}
+
+        {% if is_pagenated %}
+            <ul class="pagenation">
+                {% if page_obj.has_previous %}
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                        <span aria-hidden="true">&Laquo:</span>
+                    </a>
+                {% endif %}
+                {% for page_num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == page_num %}
+                        <a class="page-link" href="#">{{ page_num }}</a>
+                    {% else %}
+                        <a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                    <a class="page-link" href="?page={{page_obj.next_page_number}}">
+                        <span aria-hidden="true">$raquo;</span>
+                    </a>
+                {% endif %}
+            </ul>
+        {% endif %}
+
+    </div> 
+
+{% endblock %}

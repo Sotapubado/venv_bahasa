@@ -1,0 +1,63 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.title-overall{
+    text-align: center;
+    width: 100%; 
+    background-color: rgba(red, green, blue, alpha);
+    
+}
+.both-title{
+    text-align: center;
+    -webkit-text-stroke: 3px red;
+    color: red;
+}
+
+.subtitle-box{
+    padding-top: 0.7em;
+
+}
+
+.subtitle-name{
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-size: larger;
+}
+.title-name{
+    letter-spacing: 10px;
+    font-family: Impact, fantasy;
+    font-size: 3em;
+}
+.about-link,
+.info-link{
+    padding: 45px;
+    position: relative; bottom:6em;
+    float: right;
+   
+}
+
+.about-link{
+    padding-right: 4em;
+}
+
+.nav-link{
+    font-weight: 900;
+    color: red;       /* 文字色を白に変更 */   /* 文字サイズを50pxに指定 */
+  font-family: Beon; /* ネオン風のフォントを指定(ダウンロードしたもの) */
+  animation: flash 5s infinite; /* アニメーションflashを1秒ごとに繰り返す */
+  text-decoration: none;
+}
+@keyframes flash {
+  0%, 100% {
+    /* 明るく光るよう影を重ねる */
+    text-shadow: 0 0 10px rgb(224, 15, 15), 0 0 20px rgb(235, 30, 30), 0 0 30px rgb(224, 16, 16), 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  50% {
+    /* 淡く光るよう影を重ねる */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fcfcfc, 0 0 30px #fcfcfc, 0 0 40px #fc00de;
+  }
+}

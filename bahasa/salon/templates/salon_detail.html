@@ -1,0 +1,29 @@
+{% extends 'baseafter.html' %}
+{% load static %}
+{% block title %}Salon Detail{% endblock %}
+{% block activate_salon_list %}activate{% endblock %}
+
+{% block contents %}
+
+<div class ="detail-overall">
+
+    <strong>title</strong>
+    {{ object.title }}
+    <hr>
+    <strong>contents</strong>
+    {{ object.content|linebreaksbr }}
+    <hr>
+    <li>Photo</li>
+    {% if object.photo %}
+    <img src="{{object.photo.url}}" width="200" height="200">
+    {% endif %}
+    <hr>
+    <strong>date</strong>
+    {{ object.created_at }}
+    <hr>
+    <strong>update-date</strong>
+    {{ object.updated_at }}
+
+</div>
+
+{% endblock %}

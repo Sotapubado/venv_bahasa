@@ -1,0 +1,47 @@
+{% load static %}
+
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fi=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% block title %}{% endblock %}</title>
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bahasa1_index.css' %}">
+        
+
+        {% block head %}{% endblock %}
+
+    </head>
+    <body>
+
+        <header>
+            <div class="title-overall">
+
+                <div class="both-title">
+                    <div class="subtitle-box">
+                        <h5 class="subtitle-name">For all people who are learning Indonesian</h5>
+                    </div>
+                    <div class="title-box">
+                        <h2 class="title-name">BAHASing</h2>
+                    </div>
+                </div>
+
+                <div class="about-link"><a class="nav-link" href="{% url 'bahasa1:about' %}">about</a></div>
+                <div class="info-link"><a class="nav-link" href="{% url 'bahasa1:info' %}">info</a></div>
+               
+            </div>
+
+   
+              
+            
+        </header>
+
+        {% block header %}{% endblock %}
+
+        {% block contents %}{% endblock %}
+    </body>
+</html>

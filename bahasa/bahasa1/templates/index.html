@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}BAHASing{% endblock %}
+
+
+
+
+
+{% block contents %}
+
+
+
+    <div class="index-overall">
+
+        {% block header %}{% endblock %}
+
+        <div class="index-message">
+            <div class="im-upper">All you have to do is</div> 
+            <div class="im-bottom">to study Indonesian</div>
+            
+        </div>
+        <div class="accounts-links">
+            <a class="accounts-link" href="{% url 'account_signup' %}"><span id="sample">Sign Up</span>
+ 
+            </a>
+
+            <a class="accounts-link" href="{% url 'account_login' %}"><span id="sample">Log In</span>
+
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+
+
