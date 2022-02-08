@@ -3,22 +3,24 @@
     padding: 0px;
 }
 
-
 .title-overall{
+    height: 17%;
     text-align: center;
     width: 100%; 
-    background-color: rgba(red, green, blue, alpha);
-    
+    background:rgba(255, 255, 255, 0.507);
+
+    position: fixed;
+
+    z-index: 10000;
 }
 .both-title{
     text-align: center;
-    -webkit-text-stroke: 3px red;
+    -webkit-text-stroke: 1px red;
     color: red;
 }
 
 .subtitle-box{
     padding-top: 0.7em;
-
 }
 
 .subtitle-name{
@@ -29,7 +31,7 @@
 }
 .title-name{
     letter-spacing: 10px;
-    font-family: Impact, fantasy;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 3em;
 }
 .about-link,

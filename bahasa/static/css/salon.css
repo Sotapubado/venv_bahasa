@@ -3,3 +3,30 @@
     padding: 5em;
     top: 5em;
 }
+
+.salon-index-blank{
+    height: 17%;
+}
+
+.salon-index-overall{
+    background-image: url("/static/image/bahasa3.jpg");
+    width: 100%;
+    height: 100%;
+}
+.salon-index-messages{
+    height: 50%;
+    padding: 10px;
+}
+.salon-list-box,
+.salon-create-box{
+    position: relative;
+    left: 8em;
+}
+.salon-list-box{
+    float: left;
+    width: 50%;
+}
+.salon-create-box{
+    float: right;
+    width: 50%;
+}

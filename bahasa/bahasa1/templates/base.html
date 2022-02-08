@@ -17,6 +17,7 @@
 
     </head>
     <body>
+        {% block header %}{% endblock %}
 
         <header>
             <div class="title-overall">
@@ -34,13 +35,8 @@
                 <div class="info-link"><a class="nav-link" href="{% url 'bahasa1:info' %}">info</a></div>
                
             </div>
-
-   
-              
             
         </header>
-
-        {% block header %}{% endblock %}
 
         {% block contents %}{% endblock %}
     </body>

@@ -1,0 +1,20 @@
+{% extends 'baseafter.html' %}
+{% load static %}
+
+{% block title %}mypage{% endblock %}
+
+{% block contents %}
+
+<div class="mypage-overall">
+    <h1>My Page</h1>
+
+    {{ user.intro_photo }}
+
+    {{ user.username }}
+    {{ user.email }}
+    {{ user.introduction }}
+    
+    
+</div>
+
+{% endblock %}

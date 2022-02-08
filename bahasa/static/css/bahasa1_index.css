@@ -10,7 +10,7 @@
 }  
 
 .index-message{
-    position: relative;
+    position: absolute;
     top: 250px;
     font-size: 7em;
     left: 3em;
@@ -38,9 +38,5 @@
     display: flex;
     top: 40%;
     width: auto;
-}
-
-#sample{
-   
 }
 

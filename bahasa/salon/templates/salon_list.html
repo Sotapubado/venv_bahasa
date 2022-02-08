@@ -9,14 +9,19 @@
 
         {% for salon in salon_list %}
          <div class="post-preview">
+            <h3 class="post-user">
+                {{ salon.user }}
+            </h3>
             <a class="detail-link" href="{% url 'salon:salon_detail' salon.pk %}"> 
+
                 <h2 class="post-title">
                     {{ salon.title }}
                 </h2>
-                <h3 class="post-subtitle">
-                    {{ salon.content|truncatechars:20 }}
-                </h3>
+
             </a>
+            <h3 class="post-subtitle">
+                {{ salon.content|truncatechars:20 }}
+            </h3>
             <p class="post-meta">{{ salon.created_at }}</p>
         </div>
         <hr>

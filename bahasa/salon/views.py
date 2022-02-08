@@ -24,8 +24,9 @@ class Salon_listView(LoginRequiredMixin, generic.ListView):
 class Salon_DetailView(LoginRequiredMixin, generic.DetailView):
     model = Salon
     template_name = 'salon_detail.html'
-    slug_field = "title"
-    slug_url_kwarg = "title"
+    slug_field = "user"
+    slug_url_kwarg = "user"
+   
 
 class Salon_CreateView(LoginRequiredMixin, generic.CreateView):
     model = salon

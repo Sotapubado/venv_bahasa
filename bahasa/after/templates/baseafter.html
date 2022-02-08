@@ -12,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/baseafter.css' %} ">
         <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/salon.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bahasa1_index.css' %}">
+
         <script type="text/javascript" src="{% static 'js/baseafter.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
 
@@ -35,30 +37,27 @@
                 <div class="about-link"><a class="nav-link" href="{% url 'bahasa1:about' %}">about</a></div>
                 <div class="info-link"><a class="nav-link" href="{% url 'bahasa1:info' %}">info</a></div>
 
-                
-
-
-            </div>
-
-            <div class="header-logo-menu">
-                <div id="nav-drawer">
-                    <input id="nav-input" type="checkbox" class="nav-unshown">
-                    <label id="nav-open" for="nav-input"><span></span></label>
-                    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
-
-                  
-                    <div id="nav-content">
-                        <a class="salon-link" href="{% url 'salon:salon_index' %}">Salon</a>
-                        <a class="logout-link" href="{% url 'account_logout' %}">Log out</a>
+                <div class="header-logo-menu">
+                    <div id="nav-drawer">
+                        <input id="nav-input" type="checkbox" class="nav-unshown">
+                        <label id="nav-open" for="nav-input"><span></span></label>
+                        <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    
+                      
+                        <div id="nav-content">
+                            <a class="index-link" href="{% url 'after:after_index' %}">Home</a>
+                            <a class="mypage-link" href="{% url 'after:after_mypage' %}">My Page</a>
+                            <a class="salon-link" href="{% url 'salon:salon_index' %}">Salon</a>
+                            <a class="inquiry-link" href="{% url 'after:after_inquiry' %}">Inquiry</a>
+                            <a class="logout-link" href="{% url 'account_logout' %}">Log out</a>
+                        </div>
+    
                     </div>
-                 
-
                 </div>
             </div>
 
-           
+            <div class="blank"></div>
 
-  
             {% block header %}
             
             {% endblock %}
